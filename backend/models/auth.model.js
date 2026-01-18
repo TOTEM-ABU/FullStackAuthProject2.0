@@ -26,10 +26,10 @@ const userSchema = new mongoose.Schema(
     },
     resetPasswordToken: String,
     resetPasswordExpiresAt: Date,
-    verificationToken: String,
+    // verificationToken: String,
     verificationTokenExpiresAt: Date,
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
 const User = mongoose.model("User", userSchema);
