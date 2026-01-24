@@ -1,28 +1,36 @@
 export const VERIFICATION_EMAIL_TEMPLATE = `
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Verify Your Email</title>
+  <style>
+    body { margin: 0; padding: 0; background: linear-gradient(135deg, #4a148c, #7b1fa2); font-family: 'Segoe UI', system-ui, sans-serif; color: #ffffff; }
+    .container { max-width: 600px; margin: 40px auto; background: rgba(0,0,0,0.3); border-radius: 30px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.6); backdrop-filter: blur(10px); }
+    .header { background: linear-gradient(135deg, #9c27b0, #e040fb); padding: 50px 20px; text-align: center; }
+    .header h1 { margin: 0; font-size: 42px; font-weight: 900; text-transform: uppercase; letter-spacing: 6px; text-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+    .content { padding: 50px 40px; text-align: center; }
+    .code-box { background: rgba(255,255,255,0.15); border: 3px solid #e040fb; border-radius: 20px; padding: 30px; margin: 30px auto; display: inline-block; min-width: 280px; box-shadow: 0 10px 30px rgba(156,39,176,0.6); }
+    .code { font-size: 48px; font-weight: 900; letter-spacing: 12px; color: #e040fb; text-shadow: 0 0 20px #e040fb; }
+    .footer { padding: 30px; text-align: center; font-size: 13px; color: #ce93d8; }
+  </style>
 </head>
-<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
-  <div style="background: linear-gradient(to right, #aa47ac, #871885); padding: 20px; text-align: center;">
-    <h1 style="color: white; margin: 0;">Verify Your Email</h1>
-  </div>
-  <div style="background-color: #f9f9f9; padding: 20px; border-radius: 0 0 5px 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-    <p>Hello,</p>
-    <p>Thank you for signing up! Your verification code is:</p>
-    <div style="text-align: center; margin: 30px 0;">
-      <span style="font-size: 32px; font-weight: bold; letter-spacing: 5px; color: #a12db3;">{verificationCode}</span>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>TASDIQLASH KODI</h1>
     </div>
-    <p>Enter this code on the verification page to complete your registration.</p>
-    <p>This code will expire in 15 minutes for security reasons.</p>
-    <p>If you didn't create an account with us, please ignore this email.</p>
-    <p>Best regards,<br>Your App Team</p>
-  </div>
-  <div style="text-align: center; margin-top: 20px; color: #888; font-size: 0.8em;">
-    <p>This is an automated message, please do not reply to this email.</p>
+    <div class="content">
+      <p style="font-size: 24px; margin: 0 0 20px;">Boom! Xush kelibsiz! 🔥</p>
+      <p style="font-size: 18px;">Ro'yxatdan o'tishni yakunlash uchun quyidagi maxfiy koddan foydalaning:</p>
+      <div class="code-box">
+        <span class="code">{verificationCode}</span>
+      </div>
+      <p style="font-size: 15px; color: #ce93d8;">Kod 15 daqiqa ichida faol. Tezroq harakat qiling!</p>
+    </div>
+    <div class="footer">
+      © 2026 Sizning Brendingiz. Barcha huquqlar himoyalangan.
+    </div>
   </div>
 </body>
 </html>
@@ -30,36 +38,33 @@ export const VERIFICATION_EMAIL_TEMPLATE = `
 
 export const PASSWORD_RESET_SUCCESS_TEMPLATE = `
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Password Reset Successful</title>
+  <style>
+    body { margin: 0; padding: 0; background: linear-gradient(180deg, #311b92, #512da8); font-family: 'Segoe UI', system-ui, sans-serif; color: #ffffff; }
+    .container { max-width: 600px; margin: 40px auto; background: rgba(0,0,0,0.25); border-radius: 30px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.6); backdrop-filter: blur(8px); border-top: 6px solid #ab47bc; }
+    .content { padding: 60px 40px; text-align: center; }
+    .icon-circle { width: 100px; height: 100px; background: linear-gradient(135deg, #7b1fa2, #ba68c8); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px; box-shadow: 0 0 40px #ab47bc; }
+    .icon { font-size: 60px; }
+    h2 { color: #e040fb; font-size: 38px; margin: 0 0 20px; text-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+    p { font-size: 18px; line-height: 1.6; }
+    .alert { background: rgba(156,39,176,0.3); border-radius: 15px; padding: 20px; margin-top: 30px; font-size: 14px; border: 1px solid #ab47bc; }
+  </style>
 </head>
-<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
-  <div style="background: linear-gradient(to right, #4CAF50, #45a049); padding: 20px; text-align: center;">
-    <h1 style="color: white; margin: 0;">Password Reset Successful</h1>
-  </div>
-  <div style="background-color: #f9f9f9; padding: 20px; border-radius: 0 0 5px 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-    <p>Hello,</p>
-    <p>We're writing to confirm that your password has been successfully reset.</p>
-    <div style="text-align: center; margin: 30px 0;">
-      <div style="background-color: #4CAF50; color: white; width: 50px; height: 50px; line-height: 50px; border-radius: 50%; display: inline-block; font-size: 30px;">
-        ✓
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="icon-circle">
+        <span class="icon">⚡</span>
+      </div>
+      <h2>PAROL YANGILANDI!</h2>
+      <p>Sizning hisobingiz paroli muvaffaqiyatli o'zgartirildi. Endi yangi parolingiz bilan tizimga kirishingiz mumkin!</p>
+      <div class="alert">
+        <strong>Eslatma:</strong> Agar buni siz qilmagan bo'lsangiz, darhol biz bilan bog'laning!
       </div>
     </div>
-    <p>If you did not initiate this password reset, please contact our support team immediately.</p>
-    <p>For security reasons, we recommend that you:</p>
-    <ul>
-      <li>Use a strong, unique password</li>
-      <li>Enable two-factor authentication if available</li>
-      <li>Avoid using the same password across multiple sites</li>
-    </ul>
-    <p>Thank you for helping us keep your account secure.</p>
-    <p>Best regards,<br>Your App Team</p>
-  </div>
-  <div style="text-align: center; margin-top: 20px; color: #888; font-size: 0.8em;">
-    <p>This is an automated message, please do not reply to this email.</p>
   </div>
 </body>
 </html>
@@ -67,28 +72,31 @@ export const PASSWORD_RESET_SUCCESS_TEMPLATE = `
 
 export const PASSWORD_RESET_REQUEST_TEMPLATE = `
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reset Your Password</title>
+  <style>
+    body { margin: 0; padding: 0; background: linear-gradient(135deg, #4527a0, #7e57c2); font-family: 'Segoe UI', system-ui, sans-serif; color: #ffffff; }
+    .container { max-width: 600px; margin: 40px auto; background: rgba(0,0,0,0.3); border-radius: 30px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.6); backdrop-filter: blur(10px); }
+    .header { background: linear-gradient(135deg, #7b1fa2, #ab47bc); padding: 60px 20px; text-align: center; }
+    .header h2 { margin: 0; font-size: 40px; font-weight: 900; letter-spacing: 4px; text-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+    .content { padding: 50px 40px; text-align: center; }
+    .button { background: #e040fb; color: white !important; padding: 18px 50px; text-decoration: none; border-radius: 60px; font-size: 20px; font-weight: bold; display: inline-block; box-shadow: 0 10px 30px rgba(224,64,251,0.6); transition: all 0.3s; }
+    .button:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(224,64,251,0.8); }
+    .timer { font-size: 14px; color: #ce93d8; margin-top: 25px; }
+  </style>
 </head>
-<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
-  <div style="background: linear-gradient(to right, #4CAF50, #45a049); padding: 20px; text-align: center;">
-    <h1 style="color: white; margin: 0;">Password Reset</h1>
-  </div>
-  <div style="background-color: #f9f9f9; padding: 20px; border-radius: 0 0 5px 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-    <p>Hello,</p>
-    <p>We received a request to reset your password. If you didn't make this request, please ignore this email.</p>
-    <p>To reset your password, click the button below:</p>
-    <div style="text-align: center; margin: 30px 0;">
-      <a href="{resetURL}" style="background-color: #4CAF50; color: white; padding: 12px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">Reset Password</a>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>PAROLNI TIKLASH</h2>
     </div>
-    <p>This link will expire in 1 hour for security reasons.</p>
-    <p>Best regards,<br>Your App Team</p>
-  </div>
-  <div style="text-align: center; margin-top: 20px; color: #888; font-size: 0.8em;">
-    <p>This is an automated message, please do not reply to this email.</p>
+    <div class="content">
+      <p style="font-size: 20px; margin-bottom: 30px;">Parolingizni esdan chiqardingizmi? Havotir olmang, biz hozir yordam beramiz! 💥</p>
+      <a href="{resetURL}" class="button">YANGI PAROL O'R NATISH</a>
+      <p class="timer">Ushbu tugma 1 soat davomida faol.</p>
+    </div>
   </div>
 </body>
 </html>
